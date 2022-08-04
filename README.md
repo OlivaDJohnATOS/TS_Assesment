@@ -37,4 +37,4 @@ How to initialize a webpack server, and how to make it automatically convert scs
 How to structure a code using typescript
 
 ### Add the link to your project here:
-Link to access project
+[Link to access project](https://olivadjohnatos.github.io/TS_Assesment/dist/)
