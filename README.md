@@ -21,9 +21,10 @@ The trainee must follow the best practices when it comes to the use of the tools
 ### Record your notes/research here:
 
 Research done:
-Loaders (https://webpack.js.org/loaders/sass-loader/)
 
-Pure CSS/JS Modal (https://www.w3schools.com/howto/howto_css_modals.asp)
+[Loaders](https://webpack.js.org/loaders/sass-loader/)
+
+[Pure CSS/JS Modal](https://www.w3schools.com/howto/howto_css_modals.asp)
 
 ### Outline the steps/plan for your project:
 
