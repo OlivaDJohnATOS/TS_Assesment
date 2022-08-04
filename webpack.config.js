@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: "development",
     entry: {
-        bundles: path.resolve(__dirname, 'src/index.ts')
+        bundle: path.resolve(__dirname, 'src/index.ts')
     },
     module: {
         rules: [
