@@ -4,8 +4,11 @@ The trainee must refactor the diagnostic assessment using typescript, npm, webpa
 
 ## Standards:
   •	You must use Typescript
+  
   •	You must use Semantic HTML
+  
   •	You must use SASS (SCSS) your web application
+  
   •	You must use webpack
 
 ## Objectives:
@@ -13,17 +16,19 @@ The trainee must refactor the diagnostic assessment using typescript, npm, webpa
   
 ## Requirements/Task(s):
 
-    The trainee must follow the best practices when it comes to the use of the tools described before on this file and apply the required technologies.
+The trainee must follow the best practices when it comes to the use of the tools described before on this file and apply the required technologies.
 
 ### Record your notes/research here:
 
 Research done:
 Loaders (https://webpack.js.org/loaders/sass-loader/)
+
 Pure CSS/JS Modal (https://www.w3schools.com/howto/howto_css_modals.asp)
 
 ### Outline the steps/plan for your project:
 
 Setup the webpack enviroment
+
 Transcribe the Assesment#1 code into typescript
 
 ### Summarize what you learned:
