@@ -3,7 +3,7 @@ import "./SCSS/styles.scss";
 let modal = document.getElementById('myModal');
 var span = document.querySelector(".close");
 
-const PAGES = 15;
+const PAGES = 25;
 
 let pagination = PAGES;
 let minPage = 0;
