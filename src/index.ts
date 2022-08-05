@@ -3,6 +3,11 @@ import "./SCSS/styles.scss";
 let modal = document.getElementById('myModal');
 var span = document.querySelector(".close");
 
+const PAGES = 15;
+
+let pagination = PAGES;
+let minPage = 0;
+
 span.addEventListener('click', () => {
     modal.style.display = "none";
 });
@@ -47,6 +52,42 @@ const filters = [
         num: 5
     },
 ]
+
+const previousBtn = document.getElementById('PreviousBtn')! as HTMLButtonElement;
+const nextBtn = document.getElementById('NextBtn')! as HTMLButtonElement;
+
+previousBtn.addEventListener('click', () => {
+    if (pagination > 0){
+        pagination -= PAGES;
+        minPage -= PAGES;
+        previousBtn.disabled = false;
+        nextBtn.disabled = false;
+        pagination = minPage + PAGES;
+
+        if(minPage <= 0){
+            previousBtn.disabled = true;
+            minPage = 0;
+        }
+        doTheTable();
+        
+    } 
+});
+
+nextBtn.addEventListener('click', () => {
+    if (pagination < COUNTRIES.length){
+        pagination += PAGES;
+        minPage += PAGES;
+        nextBtn.disabled = false;
+        previousBtn.disabled = false;
+        minPage = pagination - PAGES;
+
+        if(pagination >= COUNTRIES.length){
+            nextBtn.disabled = true;
+            pagination = COUNTRIES.length;
+        }
+        doTheTable();
+    }
+});
 
 function createSearch() {
     const searchBar = document.getElementById('searchFilter')! as HTMLFormElement;
@@ -137,7 +178,7 @@ function createTable() {
     const tables = document.createElement("table");
     const tblBody = document.createElement("tbody");
 
-    for (let i = 0; i < COUNTRIES.length; i++){
+    for (let i = minPage; i < pagination; i++){
     let row = document.createElement("tr");
 
     for (let j = 0; j < COUNTRIES[i].length;j++){
@@ -180,20 +221,25 @@ function createTable() {
 
 const chngBtn = document.getElementById('sortBtn');
 chngBtn.addEventListener('click', () => {
+    state = !state;
+    pagination = PAGES;
+    minPage = 0;
+    nextBtn.disabled = false;
+    previousBtn.disabled = true;
+    if(state){
+        COUNTRIES.sort(); 
+    } else {
+        COUNTRIES.reverse();
+    }
+    doTheTable();
+});
+
+function doTheTable() {
     let elem = document.getElementById('tableCountries')! as HTMLTableElement;
     if (typeof elem != 'undefined') {
         elem.parentNode.removeChild(elem);
     }
-
-    state = !state;
-    if(state){
-        COUNTRIES.sort();
-        createTable();
-    } else {
-        COUNTRIES.reverse();
-        createTable();
-    }
-});
-
+    createTable();
+}
 
 
