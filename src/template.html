@@ -4,14 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../tingle/tingle.min.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="table" onload="createTable()">
+    <div class="table">
 
     </div>
     <button id="sortBtn" type="button" name="button1">SORT TABLE</button>
+    <br><br>
+    <form id="searchCountry">
+        <input type="text" id="searchFilter">
+        <select id="searchTarget">
+            <option value="Name">Name</option>
+            <option value="Capital">Capital</option>
+            <option value="Region">Region</option>
+            <option value="Language">Language</option>
+            <option value="Population">Population</option>
+            <option value="Flag">Flag</option>
+        </select>
+    </form>
+    <br>
+    
     <div id="myModal" class="modal">
         <div class="modal__content">
             <div class="modal__header">
@@ -23,7 +36,5 @@
             </div>
         </div>
     </div>
-    
-    <script src="../tingle/tingle.min.js"></script>
 </body>
 </html>
